@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <!--books/templates/books/book-create.html-->
+
+<form action="." method="POST">
+
+{% csrf_token %}
+
+{{ form.as_p }}
+
+<table>
+
+</table>
+
+<button type="submit">SUBMIT</button>
+</form>
+</body>
+</html>

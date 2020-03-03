@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<table class="table">
+    <thead>
+    <tr>
+        {% for i in azamat %}
+        <th>{{i}}</th>
+        {% endfor %}
+    </tr>
+    </thead>
+    <tbody>
+    {% for i in azamat %}
+    <tr>
+        {% for i in azamat %}
+        <td>{{i.first_name}}</td>
+        <td>{{i.last_name}}</td>
+        <td>{{i.job}}</td>
+        {% endfor %}
+    </tr>
+    {% endfor %}
+    </tbody>
+
+    <form action="." method="POST">
+
+        {% csrf_token %}
+
+        {{ form.as_p }}
+        <table>
+
+        </table>
+        <button type="submit">SUBMIT</button>
+    </form>
+
+</table>
+</body>
+</html>
