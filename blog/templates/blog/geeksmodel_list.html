@@ -2,25 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <title>Title</title>
 </head>
 <body>
-<a href="create_some" class="badge badge-primary">create new user</a>
+
+<a href="create_some" class="badge badge-primary">create post</a>
 
 <ul>
 
-    <!-- Iterate over object_list -->
     {% for object in object_list %}
-    <a href="" class="badge badge-primary">update new user</a>-->
 
 
-    <!-- Display Objects -->
     <li>{{ object.title }}</li>
     <li>{{ object.description }}</li>
 
+<!--    <p>{{ object }} - <a href='{{object.id}}/'>{{ object}}</a></p>-->
+    <a href="{{object.pk}}" class="badge badge-primary"> Datail</a>
+        <a href="{{object.id}}/update" class="badge badge-primary"> Update </a>
+            <a href="{{object.id}}/delete" class="badge badge-primary"> Delete </a>
+
+
+
     <hr/>
-    <!-- If objet_list is empty -->
     {% empty %}
     <li>No objects yet.</li>
     {% endfor %}
